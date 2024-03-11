@@ -1,5 +1,5 @@
 const API_KEY="663ba7f6ea4d41748b2d5c7eac525577"
-const url="https://newsapi.org/v2/everything?q="
+const news_url="https://newsapi.org/v2/everything?q="
 
 //fetch data when the browser window loads 
 
@@ -11,7 +11,7 @@ function reload(){
 
 async function fetchdata(query)
 {
-    const response=await fetch(`${url}${query}&apiKey=${API_KEY}`);
+    const response=await fetch(`${news_url}${query}&apiKey=${API_KEY}`);
     const data=await response.json();
     //console.log(data)
     bindData(data.articles)
